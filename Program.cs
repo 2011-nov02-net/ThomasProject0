@@ -15,7 +15,7 @@ namespace ThomasProject0
             //var testWalbmart = new WalbMart(testAddress);
             //var testWalbMart = new Dictonary<string, List<ProductDetails>>()
 
-            var Products = new Product[3];
+            var Products = new Product[4];
 
             Products[0] = new Product();
             Products[0].ProductLocation= "162 Wharf Ave, Candy Land, NJ, 12345";
@@ -38,7 +38,9 @@ namespace ThomasProject0
             Products[3].ProductPrice = 6.00;
             Products[3].ProductStock = 200;
 
-            var testWalbMart = new WalbMart[0];
+            var testWalbMart = new WalbMart();
+            testWalbMart.WalbMartLocation = "timbucktoo buck ave";
+
         }
     }
 }

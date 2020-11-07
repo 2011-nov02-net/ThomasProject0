@@ -1,0 +1,12 @@
+/Users/borosaith/Desktop/Revature/ThomasProject0/bin/Debug/netcoreapp3.1/ThomasProject0.deps.json
+/Users/borosaith/Desktop/Revature/ThomasProject0/bin/Debug/netcoreapp3.1/ThomasProject0.runtimeconfig.json
+/Users/borosaith/Desktop/Revature/ThomasProject0/bin/Debug/netcoreapp3.1/ThomasProject0.runtimeconfig.dev.json
+/Users/borosaith/Desktop/Revature/ThomasProject0/bin/Debug/netcoreapp3.1/ThomasProject0.dll
+/Users/borosaith/Desktop/Revature/ThomasProject0/bin/Debug/netcoreapp3.1/ThomasProject0.pdb
+/Users/borosaith/Desktop/Revature/ThomasProject0/obj/Debug/netcoreapp3.1/ThomasProject0.csprojAssemblyReference.cache
+/Users/borosaith/Desktop/Revature/ThomasProject0/obj/Debug/netcoreapp3.1/ThomasProject0.AssemblyInfoInputs.cache
+/Users/borosaith/Desktop/Revature/ThomasProject0/obj/Debug/netcoreapp3.1/ThomasProject0.AssemblyInfo.cs
+/Users/borosaith/Desktop/Revature/ThomasProject0/obj/Debug/netcoreapp3.1/ThomasProject0.csproj.CoreCompileInputs.cache
+/Users/borosaith/Desktop/Revature/ThomasProject0/obj/Debug/netcoreapp3.1/ThomasProject0.dll
+/Users/borosaith/Desktop/Revature/ThomasProject0/obj/Debug/netcoreapp3.1/ThomasProject0.pdb
+/Users/borosaith/Desktop/Revature/ThomasProject0/obj/Debug/netcoreapp3.1/ThomasProject0.genruntimeconfig.cache

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "ThomasProject0/1.0.0": {
+        "runtime": {
+          "ThomasProject0.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ThomasProject0/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

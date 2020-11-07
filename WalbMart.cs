@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ThomasProject0
 {
-    public class WalbMart
+    public class WalbMart 
     {
         private string location;
 
@@ -13,18 +13,10 @@ namespace ThomasProject0
         {
             Loc = location;
         }
-
         public string WalbMartLocation
         {
             get { return location; }
             set { location = value; }
         }
-
-        public static void getProducts()
-        {
-
-        }
-
-        
     }
 }
