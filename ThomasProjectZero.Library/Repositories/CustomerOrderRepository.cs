@@ -47,19 +47,6 @@ namespace ThomasProjectZero.Library.Repositories
         //{
         //    return value.ToString("yyyyMMddHHmmssffff");
         //}
-
-        public void PlaceOrder(string customerName, DateTime date, string note)
-        {
-            if (moneyAmount <= 0)
-            {
-                Console.WriteLine(nameof(moneyAmount)); // prints "moneyAmount"
-                Console.WriteLine("amount"); // prints "amount"
-                Console.WriteLine(moneyAmount); // prints amount (e.g. 25.0)
-                throw new ArgumentOutOfRangeException(nameof(moneyAmount), "Amount of deposit must be positive");
-            }
-            var deposit = new Transaction(moneyAmount, date, note);
-            allTransactions.Add(deposit);
-        }
         //Adds order to a customer's order history and attaches a time stamp to it.
         //There are competing functions now, in different files, need to figure which ones work better
         public void AddOrderToCustomerHistory(Order orders, Customer customer)
