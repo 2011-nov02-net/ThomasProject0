@@ -27,13 +27,14 @@ namespace ThomasProjectZero.Library.Repositories
         {
             if (_data.Any(i => i.customer.CustomerFullName))
             {
-                throw new InvalidOperationException($"Customer with ID {customer.CustomerFullName} already exists.");
+                throw new InvalidOperationException($"You are an imposter! Customer with name {customer.CustomerFullName} already exists.");
+                break;
             }
             _data.Add(customer);
         }
 
         //functions for Customer Menu options
-        public void UpdateCustomer(Customer customer)
+        public void MenuFunctionsCustomer(Customer customer)
         {
             AddCustomer(customer);
             SearchCustomerHistory(customer);
@@ -77,8 +78,24 @@ namespace ThomasProjectZero.Library.Repositories
             //Maybe I should implement somekind of dictonary to simplify things.
             //If only I knew how to.
         }
-        
+
+        public string GetOrderHistory()
+        {
+            var goh = new System.Text.StringBuilder();
+
+            goh.AppendLine("Customer\t\tWalbMart Location\tProduct:\tCost\t");
+            
+            foreach (var order in allTransactions)
+            {
+                report.AppendLine($"{order.CustomerName}\t{order.LocationOfPurchase}\t{order.ProductName}\t{order.CostOfPurchase}\t{order.TimeOfPurchase.ToShortDateString()}");
+            }
+
+            return report.ToString();
+        }
+
+        public string PrintOrderHistory()
+        {
+            Console.WriteLine(account.GetAccountHistory());
+        }
     }
-
-
 }

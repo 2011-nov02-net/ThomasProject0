@@ -20,16 +20,16 @@ namespace ThomasProjectZero.Library.Repositories
         {
             if (search == null)
             {
-                foreach (var item in _data)
+                foreach (var wb in _data)
                 {
-                    yield return item;
+                    yield return wb;
                 }
             }
             else
             {
-                foreach (var item in _data.Where(r => r.Name.Contains(search)))
+                foreach (var wb in _data.Where(i => i.WalbMartLocation.Contains(search)))
                 {
-                    yield return item;
+                    yield return wb;
                 }
             }
         }
