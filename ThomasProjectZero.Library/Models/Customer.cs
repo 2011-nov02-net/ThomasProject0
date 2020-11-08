@@ -6,7 +6,7 @@ namespace ThomasProjectZero.Library.Models
 {
     public class Customer
     {
-        private string _customerFullName
+        private string _customerFullName;
         
         public string CustomerFullName
         {
@@ -16,7 +16,7 @@ namespace ThomasProjectZero.Library.Models
                 if (string.IsNullOrWhiteSpace(value))
                 {
                     //error checking
-                    throw new ArgumentException(message: "invalid name", paramName: nameof(value));
+                    throw new ArgumentException(message: "invalid name, stop breaking things", paramName: nameof(value));
                 }
                 _customerName = value.
             } 
