@@ -8,7 +8,7 @@ namespace ThomasProjectZero.Library.Repositories
     public class CustomerOrderRepository
     {
         //No clue if I should have two seperate repositories here
-        //one for the "WalbMarts and the other for customer data,
+        //one for the "WalbMarts" and the other for customer data,
         //but it makes enough sense in my head to do it this way.
         //They're distinct enough to warrant somekind of seperation.
         private readonly ICollection<Customer> _data;
