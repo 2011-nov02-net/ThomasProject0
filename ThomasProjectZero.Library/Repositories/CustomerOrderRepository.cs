@@ -95,7 +95,7 @@ namespace ThomasProjectZero.Library.Repositories
 
         public string PrintOrderHistory()
         {
-            Console.WriteLine(account.GetAccountHistory());
+            Console.WriteLine(Customer.GetOrderHistory());
         }
     }
 }
