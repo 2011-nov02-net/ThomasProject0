@@ -60,6 +60,7 @@ namespace ThomasProjectZero.Library.Repositories
             allTransactions.Add(deposit);
         }
         //Adds order to a customer's order history and attaches a time stamp to it.
+        //There are competing functions now, in different files, need to figure which ones work better
         public void AddOrderToCustomerHistory(Order orders, Customer customer)
         {
             DateTime saveUtcNow = DateTime.UtcNow;
