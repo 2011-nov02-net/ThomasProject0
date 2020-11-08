@@ -20,12 +20,12 @@ namespace ThomasProjectZero.Library.Repositories
 
         public Customer GetCustomerByCustomerFullFame(string customerFullName)
         {
-            return _data.First(r => r.Id == id);
+            return _data.First(i => i.CustomerFullName == customerFullName);
         }
 
         public void AddCustomer(Customer customer)
         {
-            if (_data.Any(r => r. == customer.CustomerFullName))
+            if (_data.Any(i => i.customer.CustomerFullName))
             {
                 throw new InvalidOperationException($"Customer with ID {customer.CustomerFullName} already exists.");
             }
@@ -52,7 +52,7 @@ namespace ThomasProjectZero.Library.Repositories
         {
             DateTime saveUtcNow = DateTime.UtcNow;
             DateTime myDate = DateTime.SpecifyKind(saveUtcNow, DateTimeKind.Utc);
-            customer.Orders.Add(orders => this.customer.Order.TimeOfPurchase = myDate;);
+            customer.Orders.Add(orders => this.customer.Order.TimeOfPurchase = myDate);
             //Maybe this is wrong
             //could try this instead
             //customer.Orders.Add(orders, myDate);
