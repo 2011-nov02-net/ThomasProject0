@@ -32,7 +32,7 @@ namespace ThomasProjectZero.Library.ExpirimentalReactionCore
             }
             else
             {
-                throw new ArgumentOutOfRangeException(nameof(quanitityOfPurchase), "You didn't buy anything");
+                throw new ArgumentOutOfRangeException(nameof(quanitityOfPurchase), "You didn't buy anything!");
                 break;
             }
             var order = new Order(customerFullName, locationOfPurchase, productName, quanitityOfPurchase, costOfPurchase, date);

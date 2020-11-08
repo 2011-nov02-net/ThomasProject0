@@ -84,5 +84,8 @@ namespace ThomasProjectZero.Library.Repositories
         {
             Console.WriteLine(Customer.GetOrderHistory());
         }
+
+        //Still need to read in data and populate the current customers
+        //And initialize those customers with their order history
     }
 }
