@@ -108,10 +108,7 @@ namespace Proj0
         }
         //To prevent errors and so forth when searching to being capital sensitive
         public List<PurchaseOrder> Orders { get; set; } = new List<PurchaseOrder>();
-    }
 
-    public class SaveData
-    {
         public void SerializeCustomerData(String FileName, Customer customer)
         {
             //initialize the XML Serializer
@@ -126,7 +123,10 @@ namespace Proj0
             serializer.Serialize(writer, c);
             writer.Close();
         }
+    }
 
+    public class SaveData
+    {
         public void SerializeProductOrderData(string FileName, PurchaseOrder purchaseorder)
         {
             //initialize the XML Serializer
@@ -173,7 +173,7 @@ namespace Proj0
                 Console.WriteLine("a:\tAdd new customer");
                 Console.WriteLine("s:\tView customer's order history.");
                 Console.WriteLine("d:\tSearch for WalbMart Products");
-                Consple.WriteLine("z:\tSave Data");
+                Console.WriteLine("z:\tSave Data");
                 Console.WriteLine("x:\tLoad customer and product data from disk.");
                 Console.WriteLine("f:\tQuit.");
                 Console.WriteLine();
@@ -198,12 +198,17 @@ namespace Proj0
                     }
                     datasource2.Add(customer);
                     Console.WriteLine();
-                    var SaveData.SerializeCustomerData("customerdata.xml", customer);
+                    customer.SerializeCustomerData("customerdata.xml", customer);
                     Console.WriteLine("Customer "+customer.CustomerName+" has been added and saved to file.");
                 }
-                else if (input == "s")
+                else if (input == "d")
                 {
-
+                    Console.WriteLine("d:\tHere is the list of available products.");
+                    //List available products
+                    Console.WriteLine();
+                    Console.WriteLine("Choose a product to find a WalbMart location to place your order from!");
+                    //print the list of current WalbMart locations which feature the product
+                    Console.WriteLine();
                 }
                 
             }

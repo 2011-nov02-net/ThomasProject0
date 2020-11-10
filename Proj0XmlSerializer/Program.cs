@@ -115,7 +115,7 @@ namespace Proj0XmlSerializer
                 Console.WriteLine("a:\tAdd new customer");
                 Console.WriteLine("s:\tView customer's order history.");
                 Console.WriteLine("d:\tSearch for WalbMart Products");
-                Console.WriteLine("z:\Save customer and product data from disk.");
+                Console.WriteLine("z:\tSave customer and product data from disk.");
                 Console.WriteLine("x:\tLoad customer and product data from disk.");
                 Console.WriteLine("f:\tQuit.");
                 Console.WriteLine();
