@@ -156,7 +156,6 @@ namespace Proj0
     }
 
 
-
     class Program
     {
         static void Main(string[] args)
@@ -216,6 +215,7 @@ namespace Proj0
 
         IEnumerable<Customer> GetCustomers(string search = null)
         {
+            var datasource2 = new List<Customer>();
             if (search == null)
             {
                 foreach (var item in datasource2)
@@ -231,6 +231,7 @@ namespace Proj0
                 }
             }
         }
+
 
         static void GeneratePurchaseOrders(ICollection<PurchaseOrder> data)
         {
