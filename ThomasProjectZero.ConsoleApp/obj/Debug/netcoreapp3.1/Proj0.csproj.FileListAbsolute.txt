@@ -1,0 +1,12 @@
+/Users/borosaith/Desktop/Revature/ThomasProject0/ThomasProjectZero.ConsoleApp/bin/Debug/netcoreapp3.1/Proj0.deps.json
+/Users/borosaith/Desktop/Revature/ThomasProject0/ThomasProjectZero.ConsoleApp/bin/Debug/netcoreapp3.1/Proj0.runtimeconfig.json
+/Users/borosaith/Desktop/Revature/ThomasProject0/ThomasProjectZero.ConsoleApp/bin/Debug/netcoreapp3.1/Proj0.runtimeconfig.dev.json
+/Users/borosaith/Desktop/Revature/ThomasProject0/ThomasProjectZero.ConsoleApp/bin/Debug/netcoreapp3.1/Proj0.dll
+/Users/borosaith/Desktop/Revature/ThomasProject0/ThomasProjectZero.ConsoleApp/bin/Debug/netcoreapp3.1/Proj0.pdb
+/Users/borosaith/Desktop/Revature/ThomasProject0/ThomasProjectZero.ConsoleApp/obj/Debug/netcoreapp3.1/Proj0.csprojAssemblyReference.cache
+/Users/borosaith/Desktop/Revature/ThomasProject0/ThomasProjectZero.ConsoleApp/obj/Debug/netcoreapp3.1/Proj0.AssemblyInfoInputs.cache
+/Users/borosaith/Desktop/Revature/ThomasProject0/ThomasProjectZero.ConsoleApp/obj/Debug/netcoreapp3.1/Proj0.AssemblyInfo.cs
+/Users/borosaith/Desktop/Revature/ThomasProject0/ThomasProjectZero.ConsoleApp/obj/Debug/netcoreapp3.1/Proj0.csproj.CoreCompileInputs.cache
+/Users/borosaith/Desktop/Revature/ThomasProject0/ThomasProjectZero.ConsoleApp/obj/Debug/netcoreapp3.1/Proj0.dll
+/Users/borosaith/Desktop/Revature/ThomasProject0/ThomasProjectZero.ConsoleApp/obj/Debug/netcoreapp3.1/Proj0.pdb
+/Users/borosaith/Desktop/Revature/ThomasProject0/ThomasProjectZero.ConsoleApp/obj/Debug/netcoreapp3.1/Proj0.genruntimeconfig.cache

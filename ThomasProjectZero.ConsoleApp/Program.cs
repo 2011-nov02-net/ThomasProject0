@@ -109,25 +109,72 @@ namespace Proj0
         //To prevent errors and so forth when searching to being capital sensitive
         public List<PurchaseOrder> Orders { get; set; } = new List<PurchaseOrder>();
 
-        public void SerializeCustomerData(String FileName, Customer customer)
-        {
-            //initialize the XML Serializer
-            XmlSerializer serializer = new XmlSerializer(typeof(Customer));
-            TextWriter writer = new StreamWriter(FileName);
-            //boxing for data serialization
-            //Creates a local objects of the passed customer/purchase order
-            //references 
-            Customer c = new Customer();
-            c = customer;
-            // Serialize the purchase order, and close the TextWriter.
-            serializer.Serialize(writer, c);
-            writer.Close();
-        }
-    }
 
-    public class SaveData
+    }
+    class Proj0
     {
-        public void SerializeProductOrderData(string FileName, PurchaseOrder purchaseorder)
+        static void Main(string[] args)
+        {
+            var datasource = new List<PurchaseOrder>();
+            var serializer = new XmlSerializer(typeof(List<PurchaseOrder>));
+            var datasource2 = new List<Customer>();
+            var serializer2 = new XmlSerializer(typeof(List<Customer>));
+            
+            while (true)
+            {
+                Console.WriteLine("Welcome to WalbMart, gib us all da monies.");
+                Console.WriteLine("Remember that all sales are final!");
+                Console.WriteLine("a:\tAdd new customer");
+                Console.WriteLine("s:\tView customer's order history.");
+                Console.WriteLine("d:\tSearch for WalbMart Products");
+                Console.WriteLine("z:\tSave Data");
+                Console.WriteLine("x:\tLoad customer and product data from disk.");
+                Console.WriteLine("f:\tQuit.");
+                Console.WriteLine();
+                var input = Console.ReadLine();
+                
+                if (input == "a")
+                {
+                    var c = new Customer();
+                    Console.WriteLine();
+                    Console.Write("Enter the new customer's name: ");
+                    input = Console.ReadLine();
+                    try
+                    {
+                        c.CustomerName = input;
+                    }
+                    catch (ArgumentException burp)
+                    {
+                        Console.WriteLine(burp.Message);
+                    }
+                    datasource2.Add(c);
+                    Console.WriteLine();
+                    //This can't be good for the memory.
+                    //but its the only way it lets me implement the serialize function
+                    //Why do declare a new instance of the whole program into a box.
+                    //and then use that box to pass in properties to a function,
+                    //just so that I can use a function in the same file? Whats happening here?
+                    Proj0 zero = new Proj0();
+                    zero.SerializeCustomerData("customerdata.xml", c);
+                    Console.WriteLine("Customer "+c.CustomerName+" has been added and saved to file.");
+                }
+                else if (input == "d")
+                {
+                    Console.WriteLine("d:\tHere is the list of available products.");
+                    //List available products
+                    Console.WriteLine();
+                    Console.WriteLine("Choose a product to find a WalbMart location to place your order from!");
+                    //print the list of current WalbMart locations which feature the product
+                    Console.WriteLine();
+                }
+                else if (input == "s")
+                {
+                    Console.WriteLine("Uh oh.");
+                }
+                
+            }
+        }
+            private void SerializeProductOrderData(string FileName, PurchaseOrder purchaseorder)
         {
             //initialize the XML Serializer
             XmlSerializer serializer = new XmlSerializer(typeof(PurchaseOrder));
@@ -153,64 +200,19 @@ namespace Proj0
             serializer.Serialize(writer, p);
             writer.Close();
         }
-    }
-
-
-    class Program
-    {
-        static void Main(string[] args)
+        private void SerializeCustomerData(String FileName, Customer customer)
         {
-            var datasource = new List<PurchaseOrder>();
-            var serializer = new XmlSerializer(typeof(List<PurchaseOrder>));
-            var datasource2 = new List<Customer>();
-            var serializer2 = new XmlSerializer(typeof(List<Customer>));
-            
-            while (true)
-            {
-                Console.WriteLine("Welcome to WalbMart, gib us all da monies.");
-                Console.WriteLine("Remember that all sales are final!");
-                Console.WriteLine("a:\tAdd new customer");
-                Console.WriteLine("s:\tView customer's order history.");
-                Console.WriteLine("d:\tSearch for WalbMart Products");
-                Console.WriteLine("z:\tSave Data");
-                Console.WriteLine("x:\tLoad customer and product data from disk.");
-                Console.WriteLine("f:\tQuit.");
-                Console.WriteLine();
-                var input = Console.ReadLine();
-                
-                if (input == "a")
-                {
-                    var customer = new Customer();
-                    while (customer.CustomerName == null)
-                    {
-                        Console.WriteLine();
-                        Console.Write("Enter the new customer's name: ");
-                        input = Console.ReadLine();
-                        try
-                        {
-                            customer.CustomerName = input;
-                        }
-                        catch (ArgumentException burp)
-                        {
-                            Console.WriteLine(burp.Message);
-                        }
-                    }
-                    datasource2.Add(customer);
-                    Console.WriteLine();
-                    customer.SerializeCustomerData("customerdata.xml", customer);
-                    Console.WriteLine("Customer "+customer.CustomerName+" has been added and saved to file.");
-                }
-                else if (input == "d")
-                {
-                    Console.WriteLine("d:\tHere is the list of available products.");
-                    //List available products
-                    Console.WriteLine();
-                    Console.WriteLine("Choose a product to find a WalbMart location to place your order from!");
-                    //print the list of current WalbMart locations which feature the product
-                    Console.WriteLine();
-                }
-                
-            }
+            //initialize the XML Serializer
+            XmlSerializer serializer = new XmlSerializer(typeof(Customer));
+            TextWriter writer = new StreamWriter(FileName);
+            //boxing for data serialization
+            //Creates a local objects of the passed customer/purchase order
+            //references 
+            Customer c = new Customer();
+            c = customer;
+            // Serialize the purchase order, and close the TextWriter.
+            serializer.Serialize(writer, c);
+            writer.Close();
         }
 
         IEnumerable<Customer> GetCustomers(string search = null)

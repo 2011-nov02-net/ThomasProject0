@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/borosaith/Desktop/Proj0XmlSerializer/Proj0XmlSerializer.csproj",
-      "projectName": "Proj0XmlSerializer",
-      "projectPath": "/Users/borosaith/Desktop/Proj0XmlSerializer/Proj0XmlSerializer.csproj",
+      "projectUniqueName": "/Users/borosaith/Desktop/Revature/ThomasProject0/ThomasProjectZero.ConsoleApp/Proj0.csproj",
+      "projectName": "Proj0",
+      "projectPath": "/Users/borosaith/Desktop/Revature/ThomasProject0/ThomasProjectZero.ConsoleApp/Proj0.csproj",
       "packagesPath": "/Users/borosaith/.nuget/packages/",
-      "outputPath": "/Users/borosaith/Desktop/Proj0XmlSerializer/obj/",
+      "outputPath": "/Users/borosaith/Desktop/Revature/ThomasProject0/ThomasProjectZero.ConsoleApp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/borosaith/.nuget/NuGet/NuGet.Config"
