@@ -108,10 +108,27 @@ namespace Proj0XmlSerializer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            while (true)
+            {
+                Console.WriteLine("Welcome to WalbMart, gib us all da monies.");
+                Console.WriteLine("Remember that all sales are final!");
+                Console.WriteLine("a:\tAdd new customer");
+                Console.WriteLine("s:\tView customer's order history.");
+                Console.WriteLine("d:\tSearch for WalbMart Products");
+                Console.WriteLine("z:\Save customer and product data from disk.");
+                Console.WriteLine("x:\tLoad customer and product data from disk.");
+                Console.WriteLine("f:\tQuit.");
+                Console.WriteLine();
+                var input = Console.ReadLine();
+
+                if (input == "z")
+                {
+                    SerialSaveData(data.xml, customer, purchaseorder);
+
+                
         }
 
-        public void AddOrderToPlaceOrder(string customerFullName, string locationOfPurchase, string productName, int quanitityOfPurchase, double costOfPurchase, DateTime date, int walbMartCurrentStockOfProduct, PurchaseOrder purchaseorder)
+        private void AddOrderToPlaceOrder(string customerFullName, string locationOfPurchase, string productName, int quanitityOfPurchase, double costOfPurchase, DateTime date, int walbMartCurrentStockOfProduct, PurchaseOrder purchaseorder)
         {
             if (walbMartCurrentStockOfProduct >= quanitityOfPurchase && quanitityOfPurchase > 0)
             {
@@ -131,10 +148,11 @@ namespace Proj0XmlSerializer
 
         }
         
-        private void SerialNewProductOrder(string FileName, Customer customer, PurchaseOrder purchaseorder)
+        public void SerialSaveData(string FileName, Customer customer, PurchaseOrder purchaseorder)
         {
             //initialize the XML Serializer
             XmlSerializer serializer = new XmlSerializer(typeof(PurchaseOrder));
+            XmlSerializer serializer2 = new XmlSerializer(typeof(Customer));
             TextWriter writer = new StreamWriter(FileName);
             //boxing for data serialization
             //Creates a local objects of the passed customer/purchase order
@@ -156,8 +174,10 @@ namespace Proj0XmlSerializer
             p.TotalCost = subTotal;
 
             // Serialize the purchase order, and close the TextWriter.
-            serializer.Serialize(writer, p);
+            serializer.Serialize(writer, p, c);
             writer.Close();
         }
     }
 }
+}
+
